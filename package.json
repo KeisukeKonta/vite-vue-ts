@@ -10,6 +10,7 @@
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .eslintignore --fix src"
   },
   "dependencies": {
+    "pinia": "^2.0.22",
     "vue": "^3.2.37"
   },
   "devDependencies": {
