@@ -4,7 +4,7 @@
 
   const store = useCounterStore()
 
-  defineProps<{ msg: string }>()
+  defineProps({ msg: { type: String, default: 'Vite + Vue' } })
 
   const { count } = storeToRefs(store)
   const { increment } = store
@@ -14,6 +14,11 @@
   <h1>{{ msg }}</h1>
 
   <div class="card">
+    <h2>
+      <router-link :to="`/user/${count}`">
+        Link to User {{ count }}
+      </router-link>
+    </h2>
     <button type="button" @click="increment">count is {{ count }}</button>
     <p>
       Edit

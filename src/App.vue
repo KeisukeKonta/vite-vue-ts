@@ -1,7 +1,6 @@
 <script setup lang="ts">
   // This starter template is using Vue 3 <script setup> SFCs
   // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-  import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -13,7 +12,11 @@
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <p style="display: flex; flex-direction: row; justify-content: space-around">
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/about">Go to About</router-link>
+  </p>
+  <RouterView />
 </template>
 
 <style scoped>
